@@ -2,6 +2,7 @@ const express = require('express');
 const axios = require('axios');
 const { Client, GatewayIntentBits, EmbedBuilder, REST, Routes, SlashCommandBuilder, MessageFlags, ActivityType, ApplicationCommand, ApplicationCommandOptionType } = require('discord.js');
 const config = require("./config.json");
+const dotenv = require("dotenv").config();
 
 const { successEmbed, failedEmbed, errorEmbed } = require('./embed.js')
 
@@ -40,7 +41,7 @@ client.once('ready', async () => {
     console.log(`${client.user.tag}에 로그인하였습니다!`);
 });
 
-const rest = new REST({ version: '10' }).setToken(config.clientToken);
+const rest = new REST({ version: '10' }).setToken(process.env.CLIENT_TOKEN);
 
 (async () => {
     try {
@@ -81,7 +82,7 @@ client.on('interactionCreate', async (interaction) => {
     }
 });
 
-client.login(config.clientToken)
+client.login(process.env.CLIENT_TOKEN)
 
 // [ Express.js settings ]
 
