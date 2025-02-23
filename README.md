@@ -13,9 +13,5 @@
 
 **Powered by SILICON SERVICE**
 
-**SILICON CEO** DISOCRD : ceo_silicon
-**SILICON CTO** DISCORD : stay0827
-**SILICON GM** DISCORD : gm_silicon
-
 **Support E-Mail** silicon.service.kr@gmail.com
 **Do not contact using discord.**
